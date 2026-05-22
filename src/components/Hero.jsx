@@ -78,13 +78,13 @@ const currentFloatingCard = floatingCards[activeTab];
             </div>
 
             {/* Floating cards */}
-            <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 trsanslate-y-8 w-72 ${currentFloatingCard.bgColor}`}>
+            <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 trsanslate-y-8 w-72 ${floatingCards[activeTab].bgColor}`}>
                <div className="flex items-center space-x-2 mb-2 ">
-                <div className={`w-6 h-6 ${currentFloatingCard.iconColor} flex items-center justify-center text-sm font-bold`}>{currentFloatingCard.icon}</div>
-                <span className={`text-sm font-medium ${currentFloatingCard.textColor}`}>{currentFloatingCard.tittle}</span>
+                <div className={`w-6 h-6 ${floatingCards[activeTab].iconColor} flex items-center justify-center text-sm font-bold`}>{floatingCards[activeTab].icon}</div>
+                <span className={`text-sm font-medium ${floatingCards[activeTab].textColor}`}>{floatingCards[activeTab].title}</span>
                </div>
-               <div className={`text-sm text-left ${currentFloatingCard.contentColor}`}>
-                {currentFloatingCard.content}
+               <div className={`text-sm text-left ${floatingCards[activeTab].contentColor}`}>
+                {floatingCards[activeTab].content}
                </div>
             </div>
         </div>
