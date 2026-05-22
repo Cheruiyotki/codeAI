@@ -1,4 +1,4 @@
- import { ChevronDown, Sparkles } from "lucide-react";
+ import { ArrowRight, ChevronDown, Play, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { codeExamples, floatingCards } from "../data/CodeExmples";
@@ -42,12 +42,27 @@ const currentFloatingCard = floatingCards[activeTab];
 
          <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight" >
             <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Code Faster</span>
-            <span className="bg-gradient-to-b from- blue via-blue-100 to-cyan-400 to-blue-500 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
+            <span className="bg-gradient-to-b from- blue via-blue-200 to-cyan-400 to-blue-500 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
             <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">With CodeFlow AI</span>
          </h1>
-           <p>
+           <p className="text-md sm:text-base lg:text-lg text=gray-400 max-w-2xl mx-auto  lg-mx-0 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed" >
             Accelerate your development with AI-powered code generation, intelligent autocompletion, and seamless integration. CodeFlow AI is your ultimate coding companion, designed to boost productivity and help you build better software faster than ever before.
            </p>
+          
+          <div className="flex fkex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 s,:mb-12 animate-in slide-in-from-bottom duration-700 delay-800">
+            <button>
+            <span >Start Coding Free</span>
+            <ArrowRight/>
+            </button>
+             
+             <button>
+                <div>
+                    <Play/>
+                </div>
+                <span>Watch Demo</span>
+             </button>
+          </div>
+
        </div>
         
 
