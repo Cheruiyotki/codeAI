@@ -34,7 +34,7 @@ const currentFloatingCard = floatingCards[activeTab];
         <div className="max-w-7xl mx-auto flex-col  lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 relative ">
 
        <div>
-        <div>
+        <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-blue-500/10 border-bg-blue-500/20 rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700">
             <Sparkles/>
           <span>Introducing CodeFlow AI</span>
         </div>
