@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { codeExamples, floatingCards } from "../data/CodeExmples";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 export default function  Hero() {
     const [mousePosition, setMousePosition] =useState({ x: 0, y: 0 });
@@ -16,6 +17,8 @@ export default function  Hero() {
 
     return () => window.removeEventListener("mousemove", handleMouseMove);
 }, []);
+
+const currentFloatingCard = floatingCards[activeTab];
 
     return (  <section className="relative min-h-screen items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
      <div className="absolute inset-0 opacity-30" style={{
@@ -58,11 +61,31 @@ export default function  Hero() {
 
                 {/* Code Content  */}
                 <div className="relative overflow-hidden flex-grow">
-                  <SyntaxHighlighter language="javascript">
+                  <SyntaxHighlighter 
+                  language="javascript" 
+                  style={nightOwl} 
+                  customStyle={{
+                    margin: 0,
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    lineHeight: '1.5',
+                    height: '100%',
+                    border:"1px solid #3c3c3c"}}>
                     {codeExamples[activeTab] }
                   </SyntaxHighlighter>
                 </div>
             </div>
+            </div>
+
+            {/* Floating cards */}
+            <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 trsanslate-y-8 w-72 ${currentFloatingCard.bgColor}`}>
+               <div className="flex items-center space-x-2 mb-2 ">
+                <div className={`w-6 h-6 ${currentFloatingCard.iconColor} flex items-center justify-center text-sm font-bold`}>{currentFloatingCard.icon}</div>
+                <span className={`text-sm font-medium ${currentFloatingCard.textColor}`}>{currentFloatingCard.tittle}</span>
+               </div>
+               <div className={`text-sm text-left ${currentFloatingCard.contentColor}`}>
+                {currentFloatingCard.content}
+               </div>
             </div>
         </div>
      </div>
