@@ -35,9 +35,19 @@ const currentFloatingCard = floatingCards[activeTab];
 
        <div>
         <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-blue-500/10 border-bg-blue-500/20 rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700">
-            <Sparkles/>
-          <span>Introducing CodeFlow AI</span>
+            <Sparkles className="w-4 h-4 text-blue-400"/>
+          <span className="text-xs sm:text-sm text-blue-300 ">
+            Introducing CodeFlow AI</span>
         </div>
+
+         <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight" >
+            <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Code Faster</span>
+            <span className="bg-gradient-to-b from- blue via-blue-100 to-cyan-400 to-blue-500 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
+            <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">With CodeFlow AI</span>
+         </h1>
+           <p>
+            Accelerate your development with AI-powered code generation, intelligent autocompletion, and seamless integration. CodeFlow AI is your ultimate coding companion, designed to boost productivity and help you build better software faster than ever before.
+           </p>
        </div>
         
 
