@@ -1,4 +1,4 @@
- import { ChevronDown } from "lucide-react";
+ import { ChevronDown, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { codeExamples, floatingCards } from "../data/CodeExmples";
@@ -30,6 +30,17 @@ const currentFloatingCard = floatingCards[activeTab];
      <div className="absolute top-20 left-4 sm:left-10 w-46 sm:w-72 h-48 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
      <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
+     <div className="max-w-7xl mx-auto text-center relative w-full" >  
+        <div className="max-w-7xl mx-auto flex-col  lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 relative ">
+
+       <div>
+        <div>
+            <Sparkles/>
+          <span>Introducing CodeFlow AI</span>
+        </div>
+       </div>
+        
+
      <div className="relative order-2 w-full">
         <div className="relative bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-1xl p-1 sm:p-4 shadow-2xl border border-white/10">
             <div className="bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden h-[280px]    lg:h-[450px] border-white/10" >
@@ -41,7 +52,7 @@ const currentFloatingCard = floatingCards[activeTab];
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                 </div>
-                <span className="tetx-xs sm:text-sm text-gray-300">CodeFlow AI</span>
+                <span className="text-xs sm:text-sm text-gray-300">CodeFlow AI</span>
                 </div>
                 <ChevronDown className="w-3 h-3 sm:w-3 sm:h-3 text-gray-300"/>
                 </div>
@@ -78,16 +89,18 @@ const currentFloatingCard = floatingCards[activeTab];
             </div>
 
             {/* Floating cards */}
-            <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 trsanslate-y-8 w-72 ${floatingCards[activeTab].bgColor}`}>
+            <div className={`hidden lg:block absolute bottom-4 right-4 transform translate-x-8 translate-y-8 w-72 ${currentFloatingCard.bgColor} backdrop-blur-sm rounded-lg p-4 shadow-lg border border-white/20 shadow-2xl`}>
                <div className="flex items-center space-x-2 mb-2 ">
-                <div className={`w-6 h-6 ${floatingCards[activeTab].iconColor} flex items-center justify-center text-sm font-bold`}>{floatingCards[activeTab].icon}</div>
-                <span className={`text-sm font-medium ${floatingCards[activeTab].textColor}`}>{floatingCards[activeTab].title}</span>
+                <div className={`w-6 h-6 ${currentFloatingCard.iconColor} flex items-center justify-center text-sm font-bold`}>{currentFloatingCard.icon}</div>
+                <span className={`text-sm font-medium ${currentFloatingCard.textColor}`}>{currentFloatingCard.title}</span>
                </div>
-               <div className={`text-sm text-left ${floatingCards[activeTab].contentColor}`}>
-                {floatingCards[activeTab].content}
+               <div className={`text-sm text-left ${currentFloatingCard.contentColor}`}>
+                {currentFloatingCard.content}
                </div>
             </div>
         </div>
+     </div>
+      </div>
      </div>
     </section> 
     );
