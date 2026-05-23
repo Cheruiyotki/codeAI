@@ -31,7 +31,7 @@ const currentFloatingCard = floatingCards[activeTab];
      <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
      <div className="max-w-7xl mx-auto text-center relative w-full" >  
-        <div className="max-w-7xl mx-auto flex-col  lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 relative ">
+        <div className="max-w-7xl mx-auto flex-col  lg:grid lg:grid-cols-2 text-center text-left gap-6 sm:gap-8 lg:gap-12 relative ">
 
        <div>
         <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-blue-500/10 border-bg-blue-500/20 rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700">
@@ -40,7 +40,7 @@ const currentFloatingCard = floatingCards[activeTab];
             Introducing CodeFlow AI</span>
         </div>
 
-         <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight" >
+         <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight" >
             <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">Code Faster</span>
             <span className="bg-gradient-to-b from- blue via-blue-200 to-cyan-400 to-blue-500 bg-clip-text text-transparent block mb-1 sm:mb-2">Build Better</span>
             <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">With CodeFlow AI</span>
@@ -50,14 +50,14 @@ const currentFloatingCard = floatingCards[activeTab];
            </p>
           
           <div className="flex fkex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 s,:mb-12 animate-in slide-in-from-bottom duration-700 delay-800">
-            <button>
-            <span >Start Coding Free</span>
-            <ArrowRight/>
-            </button>
+            <button className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-b from-blue-600 to-blue-400 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-102 flex items-center justify-center space-x-2">
+            <span  >Start Coding Free</span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300"/>
+            </button >
              
-             <button>
-                <div>
-                    <Play/>
+             <button className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4  bg-white/5 backdrop-blur-sm border-white-10 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:white-10 flex items-center justify-center space-x-2">
+                <div className="p-2 bg-white/10 rounded-full group-hover:bg-white/20 duration-300 transition-colors">
+                    <Play className="-4 h-4 sm:w-5 sm:h-5 fill-white"/>
                 </div>
                 <span>Watch Demo</span>
              </button>
@@ -67,8 +67,8 @@ const currentFloatingCard = floatingCards[activeTab];
         
 
      <div className="relative order-2 w-full">
-        <div className="relative bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-1xl p-1 sm:p-4 shadow-2xl border border-white/10">
-            <div className="bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden h-[280px]    lg:h-[450px] border-white/10" >
+        <div className="relative bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl border border-white/10">
+            <div className="bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden h-[280px]  sm:h-[350px] lg:h-[450px] border-white/10" >
                 {/* IDE HEADER */}
                 <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3 bg-white/5 backdrop-blur-sm border-b     border-white/10">
                 <div className="flex items-center  space-x-2">
