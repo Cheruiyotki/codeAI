@@ -1,21 +1,32 @@
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const features = [
     {
         tittle: "AI Code  Completion",
         description: " Boost your coding speed with intelligent AI code completion that suggests context-aware code snippets, helping you write code faster and with fewer errors.",
-        image: "code-completion",
+         CodeExample: `const results = await CodeFlow.search(searchQuery)
+         <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
         imagePosition: "left"
     },
     {
         tittle: "Automated Testing",
         description: "Ensure your code is bug-free with AI-powered automated testing that generates test cases and identifies potential issues before they become problems.",
-        image: "automated-testing",
+        CodeExample: `const results = await CodeFlow.search(searchQuery)
+        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
         imagePosition: "right"
     },
     {
         tittle: " Smart Debugging",
         description: " Quickly identify and fix bugs with AI-assisted debugging that analyzes your code and provides insights into potential issues and solutions.",
-        image: "smart-debugging",
+        CodeExample: `const results = await CodeFlow.search(searchQuery)
+        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
         imagePosition: "left"
     }
 ];
@@ -48,7 +59,21 @@ export default function  Features() {
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                 </div>
-                                    <span className="text-xs sm:text-sm text-gray-300"> {feature.tittle}</span>
+                                    <span className="ml-2 sm:ml-4 sm:text-sm text-gray-500"> {feature.tittle}</span>
+                                </div>
+                                <div>
+                                    <SyntaxHighlighter
+                  language="javascript" 
+                  style={nightOwl} 
+                  customStyle={{
+                    margin: 0,
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    lineHeight: '1.5',
+                    height: '100%',
+                    border:"1px solid #3c3c3c"}}>
+                    {feature.CodeExample}
+                  </SyntaxHighlighter>
                                 </div>
                             </div>
                         </div>
