@@ -62,11 +62,11 @@ export default function  Features() {
                 {features.map((feature,  key) => (
                   <div key={key} className="">
                     {/*Code section*/}
-                 =   <div>
+                   <div >
                         <div>
                             {/* IDE Interface */}
-                            <div>
-                                <div>
+                            <div className="bg-gray-950 rounded-lg p-3 sm:-4 font-mono text-xl sm:text-sm">
+                                <div className="flex items-center space-x-1 sm:space-x-2 mb-3 sm:mb-5 ">
                                     <div className="flex items-center space-x-1 sm:space-x-2">
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
@@ -81,10 +81,12 @@ export default function  Features() {
                   customStyle={{
                     margin: 0,
                     borderRadius: '8px',
-                    fontSize: '14px',
+                    fontSize: '0.7rem',
                     lineHeight: '1.5',
                     height: '100%',
-                    border:"1px solid #3c3c3c"}}>
+                    border:"1px solid #3c3c3c"}}
+                    wrapLines={true}>
+                  
                     {feature.CodeExample}
                   </SyntaxHighlighter>
                                 </div>
