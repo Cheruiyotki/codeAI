@@ -1,7 +1,7 @@
 
 const features = [
     {
-        title: "AI Code  Completion",
+        tittle: "AI Code  Completion",
         description: " Boost your coding speed with intelligent AI code completion that suggests context-aware code snippets, helping you write code faster and with fewer errors.",
         image: "code-completion",
         imagePosition: "left"
@@ -40,7 +40,17 @@ export default function  Features() {
                     {/*Code section*/}
                  =   <div>
                         <div>
-                            
+                            {/* IDE Interface */}
+                            <div>
+                                <div>
+                                    <div className="flex items-center space-x-1 sm:space-x-2">
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
+                </div>
+                                    <span className="text-xs sm:text-sm text-gray-300"> {feature.tittle}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                   </div>
