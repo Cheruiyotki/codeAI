@@ -63,7 +63,7 @@ export default function  Features() {
                   <div key={key} className="">
                     {/*Code section*/}
                    <div >
-                        <div>
+                        <div className="">
                             {/* IDE Interface */}
                             <div className="bg-gray-950 rounded-lg p-3 sm:-4 font-mono text-xl sm:text-sm">
                                 <div className="flex items-center space-x-1 sm:space-x-2 mb-3 sm:mb-5 ">
