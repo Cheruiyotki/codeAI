@@ -5,28 +5,41 @@ const features = [
     {
         tittle: "AI Code  Completion",
         description: " Boost your coding speed with intelligent AI code completion that suggests context-aware code snippets, helping you write code faster and with fewer errors.",
-         CodeExample: `const results = await CodeFlow.search(searchQuery)
-         <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
+         CodeExample: `# On Linux/macOS
+export GEMINI_API_KEY="your-actual-api-key-here"
+
+# On Windows (Command Prompt)
+set GEMINI_API_KEY="your-actual-api-key-here"
+
+# On Windows (PowerShell)
+$env:GEMINI_API_KEY="your-actual-api-key-here"`,
         imagePosition: "left"
     },
     {
         tittle: "Automated Testing",
         description: "Ensure your code is bug-free with AI-powered automated testing that generates test cases and identifies potential issues before they become problems.",
-        CodeExample: `const results = await CodeFlow.search(searchQuery)
-        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
+        CodeExample: `// math.test.js
+import { expect, test } from 'vitest';
+import { add } from './math';
+
+test('adds 2 + 3 to equal 5', () => {
+    expect(add(2, 3)).toBe(5);
+});`,
         imagePosition: "right"
     },
     {
         tittle: " Smart Debugging",
         description: " Quickly identify and fix bugs with AI-assisted debugging that analyzes your code and provides insights into potential issues and solutions.",
-        CodeExample: `const results = await CodeFlow.search(searchQuery)
-        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>;`,
+        CodeExample: `// You have to guess where it broke, or add 10 console.logs to find out
+async function getUserDashboardNaive(userId) {
+ 
+  const data = await response.json(); // Throws if server returns HTML error page
+  
+  // High risk of "Cannot read properties of undefined (reading 'map')"
+  const premiumSpecs = data.profile.settings.roles.map(role => role.toUpperCase()); 
+  
+  return { name: data.name, specs: premiumSpecs };
+};`,
         imagePosition: "left"
     }
 ];
