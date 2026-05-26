@@ -60,6 +60,13 @@ export default function  Pricing() {
                     Choose the perfect plan for your needs. All plans include a 14-day free trial.
                 </p>
             </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ">
+                {plans.map((plan, key) => ( 
+                    <div key={key} className={`relative bg-slate-900`}></div>
+                ))}
+            </div>
+
             </div>
          </section>;
 }
