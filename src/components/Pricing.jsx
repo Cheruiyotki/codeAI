@@ -63,7 +63,7 @@ export default function  Pricing() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ">
                 {plans.map((plan, key) => ( 
-                    <div key={key} className={`relative bg-slate-900`}></div>
+                    <div key={key} className={`relative bg-slate-900/50 backdrop-blur-sm border rounded-xl sm:rounded-2xl  p-6 sm:p-8 transition-all duration-300 overflow-visible flex-col h-full ${plan.mostPopular ? " border-blue-500 shadow-2xl shadow-blue-500/20 lg:scale-105" : "border-slate-800 hover:border-blue-500"}`}></div>
                 ))}
             </div>
 
