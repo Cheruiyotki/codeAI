@@ -60,10 +60,11 @@ export default function  Features() {
 
             <div className="space-y-16 sm:space-y-20 lg:space-y-32">
                 {features.map((feature,  key) => (
-                  <div key={key} className="">
+                  <div key={key} className={`flex flex-col  lg:flex-grow items-center gap-8 sm:gap-12 ${feature.imagePosition === "right" ? "lg:flex-row-reverse" : ""} `}>
                     {/*Code section*/}
-                   <div >
-                        <div className="">
+                   <div className="flex-1 w-full" >
+                    <div className="relative group">
+                        <div className="relative bg-gray-900/50 background-drop-blur-sm border border-gray-700/50 ronded-xl sm:rounded-2xl p-4 sm:p-4 overflow-hiddden group-hover:border-1 group-hover:border-blue-600/50 transition-all duration-300">
                             {/* IDE Interface */}
                             <div className="bg-gray-950 rounded-lg p-3 sm:-4 font-mono text-xl sm:text-sm">
                                 <div className="flex items-center space-x-1 sm:space-x-2 mb-3 sm:mb-5 ">
@@ -72,7 +73,7 @@ export default function  Features() {
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                 </div>
-                                    <span className="ml-2 sm:ml-4 sm:text-sm text-gray-500"> {feature.tittle}</span>
+                                    <span className="ml-2 sm:ml-4 sm:text-sm text-gray-400"> {feature.tittle}</span>
                                 </div>
                                 <div>
                                     <SyntaxHighlighter
@@ -91,6 +92,14 @@ export default function  Features() {
                   </SyntaxHighlighter>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    </div>
+                    {/* Text section */}
+                    <div className="flex-1 w-full">
+                        <div>
+                           <h3>{feature.tittle}</h3>
+                           <p className="text-gray-400">{feature.description}</p>
                         </div>
                     </div>
                   </div>
