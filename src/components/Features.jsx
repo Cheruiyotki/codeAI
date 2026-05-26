@@ -60,7 +60,7 @@ export default function  Features() {
 
             <div className="space-y-16 sm:space-y-20 lg:space-y-32">
                 {features.map((feature,  key) => (
-                  <div key={key} className={`flex flex-col  lg:flex-grow items-center gap-8 sm:gap-12 ${feature.imagePosition === "right" ? "lg:flex-row-reverse" : ""} `}>
+                  <div key={key} className={`flex flex-col  lg:flex-row items-center gap-8 sm:gap-12 ${feature.imagePosition === "right" ? "lg:flex-row-reverse" : ""} `}>
                     {/*Code section*/}
                    <div className="flex-1 w-full" >
                     <div className="relative group">
