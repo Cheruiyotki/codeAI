@@ -45,7 +45,13 @@ export default function  Testimonals() {
             {/*  right Side * */}
             <div className="lg:w-1/2 w-full">
                 <div>
-                    
+                    {testimonials.map((testimonial,  key) => (
+                        <div
+                         key={key}
+                        className="bg-slate-900/50 p-4 sm:p-6 backdrop-blur-sm border border-slate-800 rounded-xl sm:rounded-2xl" >
+                            
+                        </div>
+                    ))}
                 </div>
             </div>
             </div>
