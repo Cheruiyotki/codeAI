@@ -1,10 +1,13 @@
 import { Menu, X, XIcon } from "lucide-react";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ scrolled }) {
     const [mobileMenuIsOpen, setMobileMenuISOpen] =  useState(false);
     return (
-        <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-slate-950/20 backdrop-blur">
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 
+        ${scrolled 
+        ? "bg-slate-950/20 backdrop-blur-lg border-b border-slate-800 shadow-lg" 
+        : "bg-transparent"}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
                     <div className="flex items-center space-x-l group cursor-pointer">
@@ -25,7 +28,7 @@ export default function Navbar() {
                     <a href="#pricing" className="text-gray-300 hover:text-white text-sm lg:text-base">
                          Pricing
                     </a>
-                    <a href="#testtimonals" className="text-gray-300 hover:text-white text-sm lg:text-base">
+                    <a href="#testimonals" className="text-gray-300 hover:text-white text-sm lg:text-base">
                          Testimonals
                     </a>
                 </div>
@@ -53,7 +56,7 @@ export default function Navbar() {
                      className="block text-gray-300 hover:text-white text-sm lg:text-base">
                          Pricing
                     </a>
-                    <a href="#testtimonals"
+                    <a href="#testimonals"
                     onClick={() => setMobileMenuISOpen( false)}
                      className="block text-gray-300 hover:text-white text-sm lg:text-base">
                          Testimonals
