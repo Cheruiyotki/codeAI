@@ -27,5 +27,28 @@ const testimonials = [
 
 
 export default function  Testimonals() {
-    return <div></div>;
+    return  <section 
+    id="testimonials" 
+    className="py-16 sm:py-20 px-10 sm:px-8 relative">
+
+        <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-start gap-8 sm:gap-12 lg:gap-16">
+            {/*  left Side * */}
+            <div className= "lg:w-1/2 w-full text-center lg:text-left">
+                <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+                    What Developers Are Saying about Us.
+                </h2>
+                <p className="text-lg text-gray-400 max-w-2xl sm:text-lg mx-auto">
+                    Hear from our satisfied users who have experienced the transformative power of AI Dev Hub in their development journey.
+                </p>
+            </div>
+            {/*  right Side * */}
+            <div className="lg:w-1/2 w-full">
+                <div>
+                    
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
 }
