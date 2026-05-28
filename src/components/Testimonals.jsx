@@ -5,19 +5,19 @@ const testimonials = [
     {
         name: "John Doe",
         title: "CEO of Tech Innovators",
-        image: " https://www.pexels.com/photo/elegant-african-woman-in-traditional-dress-37677556/",
+        image: " https://images.pexels.com/photos/37741524/pexels-photo-37741524.jpeg",
         content: "AI Dev Hub has transformed our development process. The tools and resources available have significantly accelerated our AI projects, allowing us to innovate faster than ever before."
     },
     {
         name: "Jane Smith",
         title: "Lead AI Engineer at FutureTech",
-        image: " https://www.pexels.com/photo/elegant-african-woman-in-traditional-dress-37677556/",
+        image: "https://images.pexels.com/photos/37748015/pexels-photo-37748015.jpeg",
         content: "The AI Dev Hub has been instrumental in our team's success. The comprehensive suite of tools and the exceptional support have enabled us to deliver cutting-edge AI solutions efficiently."
     },
     {
         name: "Emily Johnson",
         title: "Data Scientist at DataWorks",
-        image: " https://www.pexels.com/photo/elegant-african-woman-in-traditional-dress-37677556/",
+        image: "https://images.pexels.com/photos/3886347/pexels-photo-3886347.jpeg",
         content: "I can't recommend AI Dev Hub enough. The platform's user-friendly interface and powerful features have made it an essential part of our AI development workflow."
     }
 ]
@@ -49,7 +49,19 @@ export default function  Testimonals() {
                         <div
                          key={key}
                         className="bg-slate-900/50 p-4 sm:p-6 backdrop-blur-sm border border-slate-800 rounded-xl sm:rounded-2xl" >
-                            
+                            <div className="flex items-start space-x-3 sm:space-x-4">
+                              <div className="flex-shrink-0">
+                                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                             ""
+                                </div>
+                              </div>
+                              <div className="flex-grow">
+                                <p>{testimonial.content}</p>
+                                <div>
+                                    <img src={testimonial.image} alt={testimonial.name} />
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     ))}
                 </div>
