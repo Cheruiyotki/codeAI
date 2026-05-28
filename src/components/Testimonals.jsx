@@ -58,7 +58,7 @@ export default function  Testimonals() {
                               <div className="flex-grow">
                                 <p>{testimonial.content}</p>
                                 <div>
-                                    <img src={testimonial.image} alt={testimonial.name} />
+                                    <img src={testimonial.image} alt={testimonial.name} className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"/>
                                 </div>
                               </div>
                             </div>
