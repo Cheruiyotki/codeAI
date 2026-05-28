@@ -64,8 +64,12 @@ export default function  Pricing() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ">
                 {plans.map((plan, key) => ( 
-                    <div key={key} className={`relative bg-slate-900/50 backdrop-blur-sm border rounded-xl sm:rounded-2xl  p-6 sm:p-8 transition-all duration-300 overflow-visible flex-col h-full ${plan.mostPopular ? " border-blue-500 shadow-2xl shadow-blue-500/20 lg:scale-105" : "border-slate-800 hover:border-slate-600"}`}>
-
+                    <div key={key} className={`relative bg-slate-900/50 backdrop-blur-sm border rounded-xl sm:rounded-2xl  p-6 sm:p-8 transition-all duration-300 overflow-visible flex-col h-full 
+                    ${plan.mostPopular 
+                    ? " border-blue-500 shadow-2xl shadow-blue-500/20 lg:scale-105" 
+                    : "border-slate-800 hover:border-slate-600"}`}>
+                 
+                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none" /> 
                         {plan.mostPopular && ( 
                             <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2">
                                 <div className="flex items-center space-x-1 px-3 sn:px-4 py-1 sm:py-1.5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
